@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Formulário Peças</title>
+</head>
+<body>
+
+    <!-- Formulário -->
+    <div>
+        <form method="post" enctype="multipart/form-data" action="processa_pecas.php">
+
+            <!-- Quantidade -->
+            <div>
+                <label>Quantidade de peças:</label>
+                <input type="number" name="quantidade">
+            </div>
+
+            <!-- Preço -->
+            <div>
+                <label>Preço da peça:</label>
+                <input type="number" name="preco">
+            </div>
+
+            <!-- Tamanho -->
+            <div>
+                <label>Tamanho da peça:</label>
+                <input type="radio" name="tamanho" value="PP"><label>PP</label>
+                <input type="radio" name="tamanho" value="P"><label>P</label>
+                <input type="radio" name="tamanho" value="M"><label>M</label>
+                <input type="radio" name="tamanho" value="G"><label>G</label>
+                <input type="radio" name="tamanho" value="GG"><label>GG</label>
+            </div>
+
+            <!-- Tipo -->
+            <div>
+                <label>Tipo da peça:</label>
+                <input type="text" name="tipo">
+            </div>
+
+            <!-- Cor -->
+            <div>
+                <label>Cor da peça:</label>
+                <input type="text" name="cor">
+            </div>
+
+            <!-- Descrição -->
+            <div>
+                <label>Descrição da peça:</label>
+                <textarea name="descricao"></textarea>
+            </div>
+
+            <!-- Posição -->
+            <div>
+                <label>Posição da peça:</label>
+                <input type="radio" name="posicao" value="0"><label>Parte de cima</label>
+                <input type="radio" name="posicao" value="1"><label>Parte de baixo</label>
+                <input type="radio" name="posicao" value="2"><label>Corpo todo</label>
+            </div>
+
+            <!-- Marca -->
+            <div>
+                <label>Marca da peça:</label>
+                <input type="text" name="marca">
+            </div>
+
+            <!-- Imagem -->
+            <input type="hidden" name="MAX_FILE_SIZE" value="99999999">
+            <div>
+                <label>Imagem:</label>
+                <input name="imagem" type="file">
+            </div>
+
+            <!-- Enviar -->
+            <button type="submit">
+                Enviar
+            </button>
+        </form>
+    </div>
+
+</body>
+
+</html>
