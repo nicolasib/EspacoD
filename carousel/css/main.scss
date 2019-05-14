@@ -20,18 +20,31 @@ section.conteudo{
     width: 80vw;
 }
 
-.contentholder{
+.contentholder-cima{
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     margin: 0 0 0 2em;
+    text-transform: uppercase;
 }
+.contentholder-baixo{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0 0 0 2em;
+    text-transform: uppercase;
+}
+
 
 .image-content{
     display: flex;
 }
 
-.imagem{
+.imagem-cima{
+    height: 30vh;
+    display: block;
+}
+.imagem-baixo{
     height: 30vh;
     display: block;
 }
@@ -60,6 +73,20 @@ button.next-cima{
     background-color: #00000015;
 }
 button.prev-cima{
+    
+    border: none;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #00000015;
+}
+
+button.next-baixo{
+    border: none;
+    font-weight: bold;
+    padding: 10px;
+    background-color: #00000015;
+}
+button.prev-baixo{
     
     border: none;
     font-weight: bold;

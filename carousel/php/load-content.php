@@ -1,16 +1,41 @@
 <?php
-    include "conexao.php";
 
-    $id = $_POST['id'];
+    
+    if(isset($_POST['method']) && $_POST['method'] == 'loadContentCima'){
+        loadContentCima();
+    }else if(isset($_POST['method']) && $_POST['method'] == 'loadContentBaixo'){
+        loadContentBaixo();
+    }
 
-    $query = 'SELECT * FROM pecas WHERE `idPecas` = '.$id;
-    $resultado = $conector->query($query);
 
-    $resultado = mysqli_fetch_assoc($resultado);
 
-    echo '<h2 class="marca-tipo">'.$resultado['tipo'].' - '.$resultado['marca'].'</h2>';
-    echo '<span class="desc">'.$resultado['descricao'].'</span>';
-    echo '<h2 class="preco">R$ '.$resultado['preco'].'</h2>';
+    function loadContentCima(){
+        include "conexao.php";
+        $id = $_POST['idCima'];
+
+        $query = 'SELECT * FROM pecas WHERE `idPecas` = '.$id;
+        $resultado = $conector->query($query);
+
+        $resultado = mysqli_fetch_assoc($resultado);
+
+        echo '<h2 class="marca-tipo">'.$resultado['tipo'].' - '.$resultado['marca'].'</h2>';
+        echo '<span class="desc">'.$resultado['descricao'].'</span>';
+        echo '<h2 class="preco">R$ '.$resultado['preco'].'</h2>';
+    }
+
+    function loadContentBaixo(){
+        include "conexao.php";
+        $id = $_POST['idBaixo'];
+
+        $query = 'SELECT * FROM pecas WHERE `idPecas` = '.$id;
+        $resultado = $conector->query($query);
+
+        $resultado = mysqli_fetch_assoc($resultado);
+
+        echo '<h2 class="marca-tipo">'.$resultado['tipo'].' - '.$resultado['marca'].'</h2>';
+        echo '<span class="desc">'.$resultado['descricao'].'</span>';
+        echo '<h2 class="preco">R$ '.$resultado['preco'].'</h2>';
+    }
 
 
 ?>
